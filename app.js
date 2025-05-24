@@ -61,13 +61,14 @@ function onMove(event) {
                 lastX = event.offsetX;
                 lastY = event.offsetY;
             } else {
-                console.log(123)
                 if (((event.offsetX-lastX)**2+(event.offsetY-lastY)**2)**0.5 > 25) {
                     ctx.strokeStyle = dynamicPen(color.value);
                     ctx.beginPath();
                 }
                 ctx.moveTo(lastX, lastY);
-                ctx.arc(lastX, lastY, ctx.lineWidth/2, 0, 2*Math.PI)
+                ctx.arc(lastX, lastY, ctx.lineWidth/2, 0, 2*Math.PI);
+                ctx.fill();
+                ctx.biginPath();
                 ctx.lineTo(event.offsetX, event.offsetY);
                 ctx.stroke();
                 lastX = event.offsetX;
