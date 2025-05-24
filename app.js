@@ -85,6 +85,7 @@ function cancelPainting() {
     lastX = 1000;
     lastY = 0;
     brightness = 0;
+    ctx.beginPath();
     save()
 }
 function onCanvasClick() {
