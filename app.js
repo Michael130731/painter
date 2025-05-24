@@ -67,7 +67,7 @@ function onMove(event) {
                     ctx.beginPath();
                 }
                 ctx.moveTo(lastX, lastY);
-                ctx.arc(lastX, lastY, ctx.lineWidth, 0, 2*Math.PI)
+                ctx.arc(lastX, lastY, ctx.lineWidth/2, 0, 2*Math.PI)
                 ctx.lineTo(event.offsetX, event.offsetY);
                 ctx.stroke();
                 lastX = event.offsetX;
