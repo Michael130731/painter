@@ -71,6 +71,7 @@ function onMove(event) {
                 ctx.biginPath();
                 ctx.lineTo(event.offsetX, event.offsetY);
                 ctx.stroke();
+                ctx.biginPath();
                 lastX = event.offsetX;
                 lastY = event.offsetY;
             }
