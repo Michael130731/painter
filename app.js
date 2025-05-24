@@ -68,10 +68,8 @@ function onMove(event) {
                 ctx.moveTo(lastX, lastY);
                 ctx.arc(lastX, lastY, ctx.lineWidth/2, 0, 2*Math.PI);
                 ctx.fill();
-                ctx.biginPath();
                 ctx.lineTo(event.offsetX, event.offsetY);
                 ctx.stroke();
-                ctx.biginPath();
                 lastX = event.offsetX;
                 lastY = event.offsetY;
             }
