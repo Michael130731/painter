@@ -57,10 +57,10 @@ function onMove(event) {
                 ctx.strokeStyle = dynamicPen(color.value);
                 ctx.beginPath();
             }
-            ctx.moveTo(lastX, lastY);
             ctx.arc(lastX, lastY, ctx.lineWidth/2, 0, 2*Math.PI);
             ctx.fill();
             ctx.beginPath();
+            ctx.moveTo(lastX, lastY);
             ctx.lineTo(event.offsetX, event.offsetY);
             ctx.stroke();
             ctx.beginPath();
