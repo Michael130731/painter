@@ -133,6 +133,7 @@ function onEraserClick() {
     } else {
         isErase = true;
         ctx.strokeStyle = backgroundColor;
+        ctx.fillStyle = backgroundColor;
     }
 }
 function onSaveClick() {
