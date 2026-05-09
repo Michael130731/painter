@@ -149,7 +149,7 @@ function onSaveClick() {
 
 function dynamicPen(hex) {
     let random = 20/(Math.exp(-10*(Math.random()-0.5))+1)-10;
-    if (brightness+random < -50 || 50 < brightness+random) {
+    if (brightness+random < -10 || 10 < brightness+random) {
         brightness -= random;
     } else {
         brightness += random;
