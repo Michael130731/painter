@@ -53,21 +53,10 @@ function onMove(event) {
             lastX = event.offsetX;
             lastY = event.offsetY;
         } else {
-            if (((event.offsetX-lastX)**2+(event.offsetY-lastY)**2)**0.5 > 25 && !isErase) {
-                ctx.strokeStyle = dynamicPen(color.value);
-                ctx.fillStyle = ctx.strokeStyle
-                ctx.beginPath();
-            }
-            ctx.arc(lastX, lastY, ctx.lineWidth/2, 0, 2*Math.PI);
-            ctx.fill();
             ctx.beginPath();
             ctx.moveTo(lastX, lastY);
             ctx.lineTo(event.offsetX, event.offsetY);
             ctx.stroke();
-            ctx.beginPath();
-            ctx.arc(event.offsetX, event.offsetY, ctx.lineWidth/2, 0, 2*Math.PI);
-            ctx.fill();
-            ctx.beginPath();
             lastX = event.offsetX;
             lastY = event.offsetY;
         }
